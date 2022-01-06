@@ -1,0 +1,33 @@
+Here is documents of custom hooks
+
+When we use custom hooks?
+ans: When we use functional components and then if we need some same logic will have to use different components 
+then we use custom hooks. Which we write code one time but we can use it many time when we need it.
+
+
+Custom hooks naming convention: we have to start use then name 
+ex: useCounter
+
+Here :
+import React, { useState } from 'react'
+
+function useCounter(val) {
+    const [value, setValue] = useState(val)
+
+    const increment = () => {
+        setValue(value + 1)
+    }
+    const decrement = () => {
+        setValue(value - 1)
+    }
+    return [value, increment, decrement]
+}
+
+export default useCounter
+
+I write function then return it now we can use it where we need then just call it 
+
+previous useState()  same as.
+
+const [value,increment, decrement] = useCounter()
+
