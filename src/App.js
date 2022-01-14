@@ -1,6 +1,7 @@
 import './App.css';
 import CounterOne from './CustomHooks/components/CounterOne';
 import CounterTwo from './CustomHooks/components/CounterTwo';
+import Formik from './ReactFormik/components/Formik';
 import HookForm from './ReactHookForm/components/HookForm';
 import Home from './StateLifting/Home';
 
@@ -17,6 +18,8 @@ function App() {
       {/* Custom hooks part end */}
       {/* react hook form start */}
       <HookForm />
+      {/* react formik form start */}
+      <Formik />
     </div>
   );
 }

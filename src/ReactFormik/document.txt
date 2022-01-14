@@ -1,0 +1,68 @@
+This is react formik form.
+
+how we use formik form :
+
+1. install formik  npm install formik --save
+
+2. import import {useFormik} from 'formik'
+
+3. create a form which you want ex:
+        <form onSubmit={formik.handleSubmit}>
+            <label htmlFor="firstName">First Name:  </label>
+            <input 
+            id='firstName'
+            name='firstName'
+            type='text'
+            onChange={formik.handleChange}
+            value={formik.values.firstName}
+            />
+            {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
+            <br/><br/>
+
+            <label htmlFor="firstName">Last Name:  </label>
+            <input 
+            id='lastName'
+            name='lastName'
+            type='text'
+            onChange={formik.handleChange}
+            value={formik.values.lastName}
+            />
+            {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
+            <br/><br/>
+            <label htmlFor="firstName">Email:  </label>
+            <input 
+            id='email'
+            name='email'
+            type='email'
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            />
+            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+            <br/><br/>
+            <button type="submit">Submit</button>
+            </form>
+
+            here ;
+            onChange={formik.handleChange} same formik function
+            value={formik.values.firstName} value from formik
+
+4. Now have to use hook useFormik()
+const formik = useFormik({
+    initialValues: {
+        firstName: '',
+        lastName: '',
+        email: '',
+    },
+    validate,
+    onSubmit: values => {
+        // alert(JSON.stringify(values, null, 2));
+        setData(values)
+        setName(values.firstName)
+    },
+})
+
+here we can store data in our state
+
+ into the useFormik hook have to define initialValues that means field initial values and onSubmit function that means submit function
+
+5. after that you can add validation
