@@ -1,0 +1,2 @@
+state liftin :
+here data pass from child to parent

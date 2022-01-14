@@ -1,6 +1,7 @@
 import './App.css';
 import CounterOne from './CustomHooks/components/CounterOne';
 import CounterTwo from './CustomHooks/components/CounterTwo';
+import HookForm from './ReactHookForm/components/HookForm';
 import Home from './StateLifting/Home';
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
       <CounterOne />
       <CounterTwo />
       {/* Custom hooks part end */}
+      {/* react hook form start */}
+      <HookForm />
     </div>
   );
 }

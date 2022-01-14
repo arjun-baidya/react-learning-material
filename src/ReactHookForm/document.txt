@@ -1,0 +1,9 @@
+1. npm install react-hook-form
+
+2.use :
+const {register, handleSubmit,watch, formState: { errors }} =  useForm();
+here register have to use input given below
+<input {...register('firstName',{ required: true, minLength: 3,maxLength:8 })} />
+here after register "firstName" is same as previous name where data passed
+
+3. use reset for form clear after submit
