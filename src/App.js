@@ -4,6 +4,7 @@ import CounterTwo from './CustomHooks/components/CounterTwo';
 import Formik from './ReactFormik/components/Formik';
 import HookForm from './ReactHookForm/components/HookForm';
 import Home from './StateLifting/Home';
+import Test from './StyledComponent/components/Test';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       <HookForm />
       {/* react formik form start */}
       <Formik />
+
+      {/* styled component */}
+      <Test />
     </div>
   );
 }
